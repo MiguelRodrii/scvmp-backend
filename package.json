@@ -1,0 +1,21 @@
+{
+  "name": "scvmp-backend",
+  "version": "1.0.0",
+  "description": "Servidor de API para el sistema de control y venta al por mayor de productos.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "SCVMP Developement Team",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "apollo-server": "^2.19.2",
+    "express": "^4.17.1",
+    "graphql": "^15.4.0",
+    "pg-promise": "^10.9.1"
+  }
+}

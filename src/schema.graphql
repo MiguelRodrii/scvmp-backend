@@ -1,0 +1,50 @@
+#Scalar used data types
+scalar Date
+
+#Queries
+type Query {
+  productos (id: Int): [Producto]
+}
+
+#Mutations
+type Mutation {
+  createProducto(producto: ProductoInput!): Producto
+  updateProducto(producto: UpdateProductoInput): Producto
+  deleteProducto(id: Int!): Int
+}
+
+
+#Inputs
+input ProductoInput {
+    costo_compra_no_iva: Float!
+    costo_venta_no_iva: Float!
+    cantidad_disponible: Int!
+    fecha_expiracion: Date!
+    id_descripcion_producto: Int!
+}
+
+#Update Inputs
+input UpdateProductoInput {
+    id: Int!
+    costo_compra_no_iva: Float
+    costo_venta_no_iva: Float
+    cantidad_disponible: Int
+    fecha_expiracion: Date
+    id_descripcion_producto: Int
+}
+
+#Entity definitions
+type Producto {
+    id: Int!
+    costo_compra_no_iva: Float!
+    costo_venta_no_iva: Float!
+    cantidad_disponible: Int!
+    fecha_expiracion: Date!
+    descripcion: DescripcionProducto!
+}
+
+type DescripcionProducto {
+  id: Int!
+  nombre: String!
+  masa: Int!
+}
