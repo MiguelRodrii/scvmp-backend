@@ -1,7 +1,9 @@
+// Require calls
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express')
 const fs = require ('fs')
 
+// Api details
 const port = 4000;
 const path = '/graphql'
 
