@@ -7,7 +7,7 @@ const fs = require ('fs')
 const port = 4000;
 const path = '/graphql'
 
-// Express init
+// Express init just init
 const app = express();
 
 const typeDefs = gql(fs.readFileSync('./src/schema.graphql', {encoding: 'utf8'}))
