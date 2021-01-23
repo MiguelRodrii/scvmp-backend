@@ -14,8 +14,7 @@
   },
   "dependencies": {
     "apollo-server": "^2.19.2",
-    "express": "^4.17.1",
-    "graphql": "^15.4.0",
+    "graphql-tools": "^7.0.2",
     "pg-promise": "^10.9.1"
   }
 }
