@@ -1,4 +1,4 @@
-// Require calls
+// Apollo-server library requirement
 const { ApolloServer} = require('apollo-server');
 
 // TypeDefs and Resolvers requirement
