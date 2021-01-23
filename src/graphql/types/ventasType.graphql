@@ -1,0 +1,14 @@
+#Scalar used data types
+scalar Date
+
+type Venta {
+  id: Int!
+  cliente: Cliente!
+  empleado: Empleado!
+  fecha_venta: Date!
+  tipo_venta: Boolean!
+  total: Float!
+  subtotal: Float!
+  iva: Float!
+  facturado_cedula: Boolean!
+}
