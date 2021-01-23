@@ -43,8 +43,3 @@ type Producto {
     descripcion: DescripcionProducto!
 }
 
-type DescripcionProducto {
-  id: Int!
-  nombre: String!
-  masa: Int!
-}

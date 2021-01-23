@@ -1,6 +1,5 @@
-const { db } = require("./connection");
-
-const productoResolver = {
+const { db } = require("../../connection");
+module.exports = {
   Query: {
     productos(root, { id }) {
       if (id === undefined)
@@ -101,5 +100,3 @@ const productoResolver = {
     }
   }
 };
-
-module.exports = productoResolver;

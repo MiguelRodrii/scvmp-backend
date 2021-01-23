@@ -1,0 +1,5 @@
+type DescripcionProducto {
+  id: Int!
+  nombre: String!
+  masa: Int!
+}

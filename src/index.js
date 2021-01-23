@@ -1,23 +1,14 @@
 // Require calls
-const express = require('express');
-const { ApolloServer, gql } = require('apollo-server-express')
-const fs = require ('fs')
+const { ApolloServer} = require('apollo-server');
 
-// Api details
-const port = 4000;
-const path = '/graphql'
+// TypeDefs and Resolvers requirement
+const typeDefs = require('./graphql/typeDefs');
+const resolvers = require('./graphql/resolvers');
 
-// Express init just init
-const app = express();
+// Apollo server initialization 
+const server = new ApolloServer({ typeDefs, resolvers });
 
-const typeDefs = gql(fs.readFileSync('./src/schema.graphql', {encoding: 'utf8'}))
-const resolvers = require('./resolvers')
-
-const server = new ApolloServer({
-  typeDefs,
-  resolvers
-})
-
-server.applyMiddleware({ app, path })
-
-app.listen(port, () => console.info(`Server started on: http://localhost:${port}${path}`));
+// The `listen` method launches a web server.
+server.listen().then(({ url }) => {
+  console.log(`🚀  Server ready at ${url}`);
+});
