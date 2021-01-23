@@ -1,0 +1,7 @@
+type DetalleVenta {
+  id: Int!
+  cantidad: Int!
+  precio_unitario: Float!
+  producto: Producto!
+  venta: Venta!
+}
