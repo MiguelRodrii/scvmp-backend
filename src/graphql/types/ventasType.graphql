@@ -1,6 +1,7 @@
 #Scalar used data types
 scalar Date
 
+#Type
 type Venta {
   id: Int!
   cliente: Cliente!
@@ -11,4 +12,23 @@ type Venta {
   subtotal: Float!
   iva: Float!
   facturado_cedula: Boolean!
+}
+
+#Mutations
+type Mutation {
+  createVenta(venta: VentaInput!): Venta
+}
+
+
+#Inputs
+input VentaInput {
+    cedula_cliente: String!
+    cedula_empleado: String!
+    fecha_venta: Date!
+    tipo_venta: Boolean!
+    total: Float!
+    subtotal: Float!
+    iva: Float!
+    facturado_cedula: Boolean!
+    detalles: [DetalleVenta]!
 }

@@ -3,5 +3,4 @@ type DetalleVenta {
   cantidad: Int!
   precio_unitario: Float!
   producto: Producto!
-  venta: Venta!
 }
