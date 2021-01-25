@@ -1,4 +1,5 @@
 type DatosPersonales {
+  usuario: Usuario!
   email: String!
   direccion: String!
   ruc: String!
