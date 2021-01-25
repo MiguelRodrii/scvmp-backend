@@ -30,5 +30,4 @@ input VentaInput {
     subtotal: Float!
     iva: Float!
     facturado_cedula: Boolean!
-    detalles: [DetalleVenta]!
 }
