@@ -5,3 +5,10 @@ type DetalleVenta {
   producto: Producto!
   venta: Venta!
 }
+
+input DetalleVentaInput {
+   cantidad: Int!
+    precio_unitario: Float!
+  id_producto: Int!
+  id_venta: Int!
+}
