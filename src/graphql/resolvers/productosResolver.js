@@ -25,41 +25,30 @@ module.exports = {
           [producto.id]
         );
 
-        let pCostoCompraNoIva,
-          pCostoVentaNoIva,
-          pCantidadDisponible,
-          pFechaExpiracion,
-          pIdDescripcionProducto;
+        let pCostoCompraNoIva =
+          producto.costo_compra_no_iva === undefined
+            ? originalProducto.costo_compra_no_iva
+            : producto.costo_compra_no_iva;
 
-        if (producto.costo_compra_no_iva === undefined) {
-          pCostoCompraNoIva = originalProducto.costo_compra_no_iva;
-        } else {
-          pCostoCompraNoIva = producto.costo_compra_no_iva;
-        }
+        let pCostoVentaNoIva =
+          producto.costo_venta_no_iva === undefined
+            ? originalProducto.costo_venta_no_iva
+            : producto.costo_venta_no_iva;
 
-        if (producto.costo_venta_no_iva === undefined) {
-          pCostoVentaNoIva = originalProducto.costo_venta_no_iva;
-        } else {
-          pCostoVentaNoIva = producto.costo_venta_no_iva;
-        }
+        let pCantidadDisponible =
+          producto.cantidad_disponible === undefined
+            ? originalProducto.cantidad_disponible
+            : producto.cantidad_disponible;
 
-        if (producto.cantidad_disponible === undefined) {
-          pCantidadDisponible = originalProducto.cantidad_disponible;
-        } else {
-          pCantidadDisponible = producto.cantidad_disponible;
-        }
+        let pFechaExpiracion =
+          producto.fecha_expiracion === undefined
+            ? originalProducto.fecha_expiracion
+            : producto.fecha_expiracion;
 
-        if (producto.fecha_expiracion === undefined) {
-          pFechaExpiracion = originalProducto.fecha_expiracion;
-        } else {
-          pFechaExpiracion = producto.fecha_expiracion;
-        }
-
-        if (producto.id_descripcion_producto === undefined) {
-          pIdDescripcionProducto = originalProducto.id_descripcion_producto;
-        } else {
-          pIdDescripcionProducto = producto.id_descripcion_producto;
-        }
+        let pIdDescripcionProducto =
+          producto.id_descripcion_producto === undefined
+            ? originalProducto.id_descripcion_producto
+            : producto.id_descripcion_producto;
 
         const query = `update productos set costo_compra_no_iva = $2, 
         costo_venta_no_iva = $3, cantidad_disponible = $4, fecha_expiracion = $5, 

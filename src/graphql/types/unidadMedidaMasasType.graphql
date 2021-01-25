@@ -1,0 +1,5 @@
+type UnidadMedida {
+  id: Int!
+  nombre: String!
+  abreviatura: String!
+}

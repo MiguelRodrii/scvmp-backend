@@ -1,0 +1,8 @@
+type Empresa {
+  id: Int!
+  nombre: String!
+  direccion: String!
+  numero_telefonico: String!
+  nombre_gerente: String!
+  email: String!
+}

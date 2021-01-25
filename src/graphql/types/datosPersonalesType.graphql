@@ -1,0 +1,5 @@
+type DatosPersonales {
+  email: String!
+  direccion: String!
+  ruc: String!
+}
