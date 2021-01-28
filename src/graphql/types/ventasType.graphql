@@ -1,11 +1,15 @@
 #Scalar used data types
 scalar Date
 
+type Query{
+  ventas (id: Int): [Venta]
+}
+
 #Type
 type Venta {
   id: Int!
-  cliente: Cliente!
-  empleado: Empleado!
+  cedula_cliente: Cliente!
+  cedula_empleado: Empleado!
   fecha_venta: Date!
   tipo_venta: Boolean!
   total: Float!

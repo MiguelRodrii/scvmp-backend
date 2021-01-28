@@ -1,14 +1,18 @@
-type DetalleVenta {
+type Query{
+  detalles_ventas (id: Int): [DetalleVentas]
+}
+
+type DetalleVentas {
   id: Int!
   cantidad: Int!
   precio_unitario: Float!
-  producto: Producto!
-  venta: Venta!
+  id_producto: Producto!
+  id_venta: Venta!
 }
 
-input DetalleVentaInput {
-   cantidad: Int!
-    precio_unitario: Float!
+input DetalleVentasInput {
+  cantidad: Int!
+  precio_unitario: Float!
   id_producto: Int!
   id_venta: Int!
 }
