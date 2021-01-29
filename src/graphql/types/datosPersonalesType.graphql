@@ -1,4 +1,9 @@
+type Query {
+  datosPersonales(cedula: String): [Datos_Personales]
+}
+
 type Datos_Personales {
+  cedula: String!
   email: String!
   direccion: String!
   ruc: String!
