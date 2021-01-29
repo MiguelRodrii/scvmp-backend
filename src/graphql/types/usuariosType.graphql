@@ -1,3 +1,7 @@
+type Query{
+  usuarios(cedula: String): [Usuario]
+}
+
 type Usuario {
   cedula: String!
   nombre: String!
