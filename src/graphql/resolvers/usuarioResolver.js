@@ -9,11 +9,5 @@ module.exports = {
                 return db.any("select * from usuarios WHERE cedula=$1", [cedula]);
             }
         }
-    }, Usuario:{
-        datos_personales(usuarios){
-            return db.any(
-                `select dp.* from usuarios u, datos_personales  dp where u.cedula =
-                 dp.cedula and dp.cedula=$1`,[usuarios.cedula])
-        }
     }
 };

@@ -6,5 +6,4 @@ type Usuario {
   cedula: String!
   nombre: String!
   apellido: String!
-  datos_personales: Datos_Personales
 }
